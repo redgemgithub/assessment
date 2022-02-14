@@ -22,7 +22,9 @@
     }
     
     // 診断結果表示エリアの作成
-    れもゔぇAllChildren(resultDivided);こんｓｔヘアでr＝どくめんｔ．ｃれあてElement('h3');ヘアでr．イン絵rText ＝ ’診断結果';
+    removeAllChildren(resultDivided);
+    const header = document.createElement('h3');
+    header.innerText = ’診断結果';
     resultDivided.appendChild(header);
     
     const paragraph = document.createElement('p');
@@ -49,7 +51,7 @@
     }
   };
   
-  cojst answers = [
+  const answers = [
     '{userName}のいいところは声です。{userName}の特徴的な声はみなをひきつけ、心に残ります。',
     '{userName}のいいところはまなざしです。{userName}に見つめられた人は、気になって仕方がないでしょう。',
     '{userName}のいいところは情熱です。{userName}の情熱に周りの人は感化されます。',
@@ -76,8 +78,8 @@
   function assessment(userName) {
     // 全文字のコード番号を取得してそれを足し合わせる
     let sumOfcharCode = 0;
-    for (let i=0; i<uerName.Length; i++) {
-      sumOfcharCode = sumOfcharcode + userName.charCodeAt(i);
+    for (let i=0; i<userName.Length; i++) {
+      sumOfcharCode = sumOfcharCode + userName.charCodeAt(i);
     }
     
     // 文字のコード番号の合計を解答の数で割って添字の数値を求める
@@ -89,7 +91,7 @@
   }
   
   // テストコード(
-  console.assert
+  console.assert(
     assessment('太郎') === '太郎のいいところは決断力です。太郎がする決断にいつも助けられている人がいます。',
     '診断結果の文言の特定の部分を名前に置き換える処理が正しくありません。'
     );
