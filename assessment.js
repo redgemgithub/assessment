@@ -78,7 +78,7 @@
   function assessment(userName) {
     // 全文字のコード番号を取得してそれを足し合わせる
     let sumOfcharCode = 0;
-    for (let i=0; i<userName.Length; i++) {
+    for (let i=0; i<userName.length; i++) {
       sumOfcharCode = sumOfcharCode + userName.charCodeAt(i);
     }
     
@@ -89,14 +89,11 @@
     result = result.replace(/{userName}/g, userName);
     return result;
   }
-  let hoge = "";
-  for (let i=0; i<'太郎'.Length; i++) {
-    hoge = hoge + String('太郎'.charCodeAt(i))
-  }
+  
   // テストコード(
   console.assert(
     assessment('太郎') === '太郎のいいところは決断力です。太郎がする決断にいつも助けられる人がいます。',
-    hoge+'診断結果の文言の特定の部分を名前に置き換える処理が正しくありません。'
+    '診断結果の文言の特定の部分を名前に置き換える処理が正しくありません。'
     );
   
   console.assert(
