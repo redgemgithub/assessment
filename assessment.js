@@ -89,7 +89,10 @@
     result = result.replace(/{userName}/g, userName);
     return result;
   }
-  let hoge = assessment('太郎')
+  let hoge = 0;
+  for (let i=0; i<'太郎'.Length; i++) {
+    hoge = hoge + '太郎'.charCodeAt(i)
+  }
   // テストコード(
   console.assert(
     assessment('太郎') === '太郎のいいところは決断力です。太郎がする決断にいつも助けられる人がいます。',
