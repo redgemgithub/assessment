@@ -17,7 +17,7 @@
   
   assessmentButton.onclick = () => {
     const userName = userNameInput.value;
-    if (userName.length ==== 0) { //名前が空のときは処理を終了する
+    if (userName.length === 0) { //名前が空のときは処理を終了する
       return;
     }
     
