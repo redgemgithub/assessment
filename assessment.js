@@ -89,9 +89,9 @@
     result = result.replace(/{userName}/g, userName);
     return result;
   }
-  let hoge = 0;
+  let hoge = "";
   for (let i=0; i<'太郎'.Length; i++) {
-    hoge = hoge + '太郎'.charCodeAt(i)
+    hoge = hoge + String('太郎'.charCodeAt(i))
   }
   // テストコード(
   console.assert(
